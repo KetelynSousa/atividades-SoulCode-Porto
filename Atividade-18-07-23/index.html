@@ -1,28 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-  <title>Tabela de Alunos</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relação de Alunos</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        td, th {
+            border: 1px solid black;
+            padding: 5px;
+        }
+    </style>
 </head>
 <body>
-  <div id="tabelaAlunos"></div>
-  <script>
-    function criarTabelaAlunos(alunos) {
-      var tabela = '<table border="1"><tr><th>Nome</th><th>Idade</th><th>Nota</th></tr>';
-      for (var i = 0; i < alunos.length; i++) {
-        var aluno = alunos[i];
-        tabela += '<tr><td>' + aluno.nome + '</td><td>' + aluno.idade + '</td><td>' + aluno.nota + '</td></tr>';
-      }
-      tabela += '</table>';
-      return tabela;
-    }
-    var alunos = [
-      { nome: 'João', idade: 20, nota: 8.5 },
-      { nome: 'Maria', idade: 22, nota: 9.0 },
-      { nome: 'Pedro', idade: 19, nota: 7.0 },
-      { nome: 'Ana', idade: 21, nota: 6.5 }
-    ];
-    var divTabelaAlunos = document.getElementById('tabelaAlunos');
-    divTabelaAlunos.innerHTML = criarTabelaAlunos(alunos);
-  </script>
+    <h1>Relação de Alunos</h1>
+    <table id="tabela-alunos">
+        <thead>
+            <th>Nome</th>
+            <th>Idade</th>
+            <th>Nota</th>
+        </thead>
+    </table>
+
+    <script src="atividade.js"></script>
 </body>
 </html>
