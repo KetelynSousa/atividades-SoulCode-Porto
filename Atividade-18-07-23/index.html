@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tabela de Alunos</title>
+</head>
+<body>
+  <div id="tabelaAlunos"></div>
+  <script>
+    function criarTabelaAlunos(alunos) {
+      var tabela = '<table border="1"><tr><th>Nome</th><th>Idade</th><th>Nota</th></tr>';
+      for (var i = 0; i < alunos.length; i++) {
+        var aluno = alunos[i];
+        tabela += '<tr><td>' + aluno.nome + '</td><td>' + aluno.idade + '</td><td>' + aluno.nota + '</td></tr>';
+      }
+      tabela += '</table>';
+      return tabela;
+    }
+    var alunos = [
+      { nome: 'João', idade: 20, nota: 8.5 },
+      { nome: 'Maria', idade: 22, nota: 9.0 },
+      { nome: 'Pedro', idade: 19, nota: 7.0 },
+      { nome: 'Ana', idade: 21, nota: 6.5 }
+    ];
+    var divTabelaAlunos = document.getElementById('tabelaAlunos');
+    divTabelaAlunos.innerHTML = criarTabelaAlunos(alunos);
+  </script>
+</body>
+</html>
